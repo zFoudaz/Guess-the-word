@@ -1,0 +1,260 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+    background-color: #E0E0E0;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+h1{
+    /* width: 100%; */
+    text-align: center;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.try{
+    margin: 10px 0;
+    color: grey;
+    min-width: max-content;
+    display: flex;
+    justify-content: space-between;
+}
+.active{
+    color: black;
+}
+.try span{
+    font-size: 35px;
+}
+
+input,
+#answer span{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid;
+    margin: 0 5px;
+    border-radius: 6px;
+}
+
+.right_letter{
+    background-color: #16BB87;
+}
+.right_both{
+    background-color: #FC9C14;
+}
+.wrong{
+    background-color: #282E45;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.buttons button,#win button,#lose button{
+    padding: 10px 0px ;
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    font-size: 25px;
+}
+.buttons button:hover{
+    cursor: pointer;
+}
+#check{
+    background-color: #D63A2F;
+    width: 70%;
+}
+#check:hover{
+    background-color: red;
+}
+#hint{
+    background-color: #01887B;
+    width: 30%;
+}
+#hint:hover{
+    background-color: #128176;
+}
+.rules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules ul{
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.rules ul li{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+.rules ul li div{
+    min-width: max-content;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 6px;
+}
+.rules ul li p{
+    font-size: 25px;
+    width: 80%;
+}
+.orange{
+    background-color: #FC9C14;
+}
+.green{
+    background-color: #16BB87;
+}
+.grey{
+    background-color: #282E45;
+}
+.hint{
+    background-color: yellow;
+}
+#win,#lose{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #282e45a7;
+    z-index: 1;
+    overflow: hidden;
+}
+#win div,
+#lose div{
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+#win div h1,
+#lose div h1{
+    margin-top: 0;
+}
+#win button{
+    background-color: #16BB87;
+    padding: 10px;
+    transition: all 300ms;
+}
+#lose button{
+    background-color: #D63A2F;
+    padding: 10px;
+    transition: all 300ms;
+}
+#win button:hover,
+#lose button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.fadeup{
+    animation: fadeup 1s 1;
+}
+#answer span{
+    background-color: #FC9C14;
+    display: inline-block;
+}
+@keyframes fadeup {
+    from{
+        top: 100%;
+    }
+    to{
+        top: 0;
+    }
+}
+@media (max-width:1000px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width:676px){
+    .game{
+        transform: scale(0.7);
+    }
+}
+@media (max-width:320px){
+    .game{
+        position: relative;
+        top: 0;
+        transform: scale(0.6);
+    }
+}
+@media (max-width:170px){
+    .content{
+        position: relative;
+        top: 0;
+        transform: scale(0.5);
+    }
+}
+body.dark{
+    background-color: #181220;
+}
+h1.dark{
+    color: #0dc7cf;
+}
+.try.dark{
+    color: #2f4752;
+}
+.active.dark{
+    color: #0dc7cf;
+}
+.dark h2{
+    color: #0dc7cf;
+}
+.dark ul li{
+    background-color: #22bebe;
+    color: #181220;
+}
+.dark ul li div{
+    border: 3px solid black;
+}
+#darkmode{
+    position: absolute;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 6px;
+    background-color: #0dc7cf;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#darkmode:hover{
+    cursor: pointer;
+    background-color: #22bebe;
+}
+.dark#win div,
+.dark#lose div{
+    background-color: #181220;
+    
+}
+.dark#win div h1,
+.dark#lose div h1,
+.dark#win div p,
+.dark#lose div p{
+    color: #0dc7cf;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Word</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="dark">
+    <button id="darkmode" onclick="changemode()"><i class="fa-regular fa-sun"></i></button>
+    <div id="win" class="dark">
+        <div class="fadeup">
+            <h1>You won!</h1>
+            <p>yaaaaay</p>
+            <button onclick="again()">play again</button>
+        </div>
+    </div>
+    <div id="lose" class="dark">
+        <div class="fadeup">
+            <h1>You lost</h1>
+            <p>Try harder next time</p>
+            <div id="answer">
+                <p>The answer was</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button onclick="again()">play again</button>
+        </div>
+    </div>
+    <h1 class="dark">Guess The Word</h1>
+    <div class="content">
+        <div class="game">
+            <div class="tries">
+                <div class="try dark active ">
+                    <span>Try 1</span>
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+                <div class="try dark">
+                    <span>Try 2</span>
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+                <div class="try dark">
+                    <span>Try 3</span>
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+                <div class="try dark">
+                    <span>Try 4</span>
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+                <div class="try dark">
+                    <span>Try 5</span>
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+                <div class="try dark">
+                    <span>Try 6</span>
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check">Check Word</button>
+                <button id="hint">2 Hints</button>
+            </div>
+        </div>
+        <div class="rules dark">
+            <h2>Key Colors</h2>
+            <ul>
+                <li>
+                    <div class="orange"></div>
+                    <p>Letter is Right and in place</p>
+                </li>
+                <li>
+                    <div class="green"></div>
+                    <p>Letter is Right but not in place</p>
+                </li>
+                <li>
+                    <div class="grey"></div>
+                    <p>Letter is Wronge</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
